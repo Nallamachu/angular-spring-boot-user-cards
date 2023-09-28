@@ -1,0 +1,11 @@
+<div *ngFor="let user of userDetails" class="card-container">
+    <div class="card">
+        <div>
+            <img alt="" [src]="user.avatar">
+        </div>
+        <div class="card-details">
+            <p><strong>{{user.first_name}} {{user.last_name}}</strong></p>
+            <p>{{user.email}}</p>
+        </div>
+    </div>
+</div>

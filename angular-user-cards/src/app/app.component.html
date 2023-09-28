@@ -1,0 +1,16 @@
+<div class="toolbar" role="banner">
+  <div class="button-row">
+    <a routerLink="/" class="nav-link" mat-raised-button routerLinkActive="active">Home</a>
+    <a routerLink="users" class="nav-link" mat-raised-button routerLinkActive="active">Users</a>
+  </div>
+  <div class="toolbar-content">
+    <h2>MS Tech Soft</h2>
+  </div>
+</div>
+<div class="card-container" *ngIf="this.router.url === '/'">
+  <div class="card">
+    <a routerLink="users" class="nav-link" routerLinkActive="active">User Details</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

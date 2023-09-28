@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>MSTS User Cards</title>
+<link type="text/css" rel="stylesheet" href="user.css">
+</head>
+<body>
+	<div th:each="user : ${userList}">
+		<div class="card">
+			<div class="image">
+				<img alt="" th:src=${user.avatar}>
+			</div>
+			<div class="card-details">
+				<p><strong th:text=${user.first_name}/> <strong th:text=${user.last_name}/></p>
+				<p th:text=${user.email}></p>
+			</div>
+		</div>
+	</div>
+	<!-- table class="table">
+		<thead class="thead">
+			<tr>
+				<th>Id</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Avatar</th>
+			</tr>
+		</thead>
+		<tbody class="tbody">
+			<tr th:each="user : ${userList}">
+				<td th:text="${user.id}"></td>
+				<td th:text="${user.first_name}"></td>
+				<td th:text="${user.last_name}"></td>
+				<td th:text="${user.email}"></td>
+				<td th:text="${user.avatar}"></td>
+			</tr>
+		</tbody>
+	</table-->
+</body>
+</html>
